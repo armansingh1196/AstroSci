@@ -1,0 +1,77 @@
+.card {
+  padding: 2.5rem 2rem;
+}
+
+.popular {
+  border-color: var(--primary-gold) !important;
+}
+
+.popularBadge {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  background: var(--button-gradient);
+  color: var(--text-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardName {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+}
+
+.originalPrice {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.features {
+  margin-bottom: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.featureCheck {
+  color: var(--accent-green);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cardCta {
+  width: 100%;
+}

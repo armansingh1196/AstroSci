@@ -1,0 +1,150 @@
+'use client';
+
+import React, { useState } from 'react';
+import Button from '@/components/ui/Button';
+import { CheckCircle, ShieldCheck, ArrowRight, Play, FileText, Check } from 'lucide-react';
+import BookingModal from './BookingModal';
+import styles from './service.module.css';
+
+export default function ServicePageClient({
+  category,
+  tier,
+}: {
+  category: string;
+  tier: any;
+}) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const heroBgMap: Record<string, string> = {
+    kundali: '/images/Astral BG/as 1.jpg',
+    consultation: '/images/Astral BG/as 2.jpg',
+    vastu: '/images/Astral BG/as 3.jpg',
+  };
+
+  return (
+    <div className={styles.page}>
+      {/* Split Hero */}
+      <section
+        className={styles.hero}
+        style={{
+          backgroundImage: `radial-gradient(ellipse at 30% 50%, rgba(47, 29, 79, 0.85) 0%, rgba(10, 11, 28, 0.92) 70%, rgba(3, 4, 10, 0.98) 100%), url('${heroBgMap[category] || ''}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className={styles.heroInner}>
+          <div className={styles.heroText}>
+            <div className={`${styles.badge} font-sans`}>
+              {tier.popular ? 'Most Popular' : 'Premium Service'}
+            </div>
+            <h1 className="font-serif">{tier.name}</h1>
+            <p className="font-sans">{tier.description}</p>
+            
+            <div className={styles.priceContainer}>
+              <span className={`${styles.price} font-serif`}>₹{tier.price}</span>
+              <span className={`${styles.originalPrice} font-sans`}>₹{tier.originalPrice}</span>
+            </div>
+            
+            <div className={styles.ctaGroup}>
+              <Button variant="primary" onClick={() => setIsModalOpen(true)} style={{ padding: '1.2rem 3rem', fontSize: '1.1rem' }}>
+                Book Now <ArrowRight size={20} style={{ marginLeft: '10px' }}/>
+              </Button>
+              <div className={styles.heroTrust}>
+                <ShieldCheck size={20} className={styles.trustIcon} />
+                <span className="font-sans">100% Satisfaction Guarantee</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.heroVisual}>
+            <div className={styles.cosmicGradient}></div>
+            <div className={styles.floatingCard}>
+              <h3 className="font-serif">{tier.name}</h3>
+              <div className={styles.cardPrice}>₹{tier.price}</div>
+              <ul className={styles.cardFeatures}>
+                {tier.features.slice(0, 3).map((f: string, i: number) => (
+                  <li key={i}><Check size={16} /> {f}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works */}
+      <section className={styles.processSection}>
+        <div className={styles.sectionHeader}>
+          <h2 className="font-serif">How It Works</h2>
+          <p className="font-sans">A simple, transparent process to get your personalized guidance.</p>
+        </div>
+        
+        <div className={styles.compactProcess}>
+          <div className={styles.compactStep}>
+            <div className={styles.stepNumberSmall}>1</div>
+            <div>
+              <h3 className="font-serif">Book Service</h3>
+              <p className="font-sans">Provide details and complete secure payment.</p>
+            </div>
+          </div>
+          
+          <div className={styles.compactStep}>
+            <div className={styles.stepNumberSmall}>2</div>
+            <div>
+              <h3 className="font-serif">Processing</h3>
+              <p className="font-sans">We process your data or connect with you.</p>
+            </div>
+          </div>
+          
+          <div className={styles.compactStep}>
+            <div className={styles.stepNumberSmall}>3</div>
+            <div>
+              <h3 className="font-serif">Receive Guidance</h3>
+              <p className="font-sans">Get your detailed report or 1-on-1 session.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className={styles.featuresSection}>
+        <div className={styles.featuresInner}>
+          <div className={styles.featuresHeader}>
+            <span className={`${styles.sectionLabel} font-sans`}>Everything You Get</span>
+            <h2 className="font-serif">What's <em>Included</em></h2>
+            <p className="font-sans">Every package is crafted with precision and delivered with care.</p>
+          </div>
+          <div className={styles.featuresGrid}>
+            {tier.features.map((feature: string, i: number) => (
+              <div key={i} className={styles.featureCard}>
+                <div className={styles.featureNumber}>{String(i + 1).padStart(2, '0')}</div>
+                <div className={styles.featureText}>
+                  <span className="font-sans">{feature}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.featuresCta}>
+            <div className={styles.ctaRow}>
+              <div className={styles.ctaInfo}>
+                <h3 className="font-serif">Ready to begin your journey?</h3>
+                <p className="font-sans">Book now and get your personalized guidance within 48 hours.</p>
+              </div>
+              <Button variant="primary" onClick={() => setIsModalOpen(true)} style={{ padding: '1rem 2.5rem' }}>
+                Start Your Journey <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <BookingModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        category={category}
+        tier={tier.id}
+        price={tier.price}
+        serviceName={tier.name}
+      />
+    </div>
+  );
+}

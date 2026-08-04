@@ -1,0 +1,41 @@
+.page { padding-top: 80px; }
+
+.hero {
+  padding: 5rem 5%;
+  background: var(--hero-gradient);
+  text-align: center;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero h1 em { color: var(--primary-gold); font-style: normal; }
+.hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 550px; margin: 0 auto; }
+
+.content {
+  padding: var(--section-padding);
+  background: var(--section-gradient);
+}
+
+.contentInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category {
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  color: var(--primary-gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(255, 186, 95, 0.15);
+}
+
+.accordionGroup {
+  /* AccordionItem components render inside here */
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.25rem; }
+}

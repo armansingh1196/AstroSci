@@ -1,0 +1,188 @@
+.page { padding-top: 80px; }
+
+.hero {
+  padding: 8rem 5%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(47, 29, 79, 0.8) 0%, rgba(10, 11, 28, 0.95) 100%), url('/images/Astral BG/as 1.jpg') center/cover;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 206, 115, 0.1);
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero h1 em { color: var(--primary-gold); font-style: normal; }
+.hero p { color: var(--text-muted); font-size: 1.15rem; max-width: 550px; margin: 0 auto; }
+
+.content {
+  padding: var(--section-padding);
+  background: var(--primary-dark);
+}
+
+.marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary-dark), transparent);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary-dark), transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.marqueeGroup {
+  display: flex;
+  gap: 2rem;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.card {
+  min-width: 350px;
+  max-width: 450px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(135deg, rgba(62, 39, 99, 0.4) 0%, rgba(20, 15, 35, 0.8) 100%);
+  border: 1px solid rgba(255, 206, 115, 0.15);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: var(--font-serif-main);
+  font-size: 6rem;
+  color: rgba(255, 206, 115, 0.05);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: rgba(255, 206, 115, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-gold);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
+}
+
+.cardHeader span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stars {
+  color: var(--primary-gold);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+  z-index: 2;
+}
+
+.reviewText {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.85;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  flex-grow: 1;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 206, 115, 0.1);
+}
+
+.serviceBadge {
+  border-bottom: 1px solid var(--primary-gold);
+  padding-bottom: 0.2rem;
+  color: var(--primary-gold);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.25rem; }
+}

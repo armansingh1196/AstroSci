@@ -1,0 +1,136 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 5% 40px;
+  background: var(--hero-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer background effect */
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold-shimmer);
+  animation: shimmer 8s infinite linear;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.authCard {
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 186, 95, 0.1);
+}
+
+.authCard h1 {
+  font-size: 2rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.authCard p {
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.field input {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  background: rgba(255, 186, 95, 0.05);
+  box-shadow: 0 0 0 3px rgba(255, 186, 95, 0.15);
+}
+
+.forgotPassword {
+  font-size: 0.8rem;
+  color: var(--primary-gold);
+  text-align: right;
+  margin-top: -0.5rem;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.forgotPassword:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footer a {
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  transition: opacity var(--transition-fast);
+}
+
+.footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .authCard {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.errorMessage {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+

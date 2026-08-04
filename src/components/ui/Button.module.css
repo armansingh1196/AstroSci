@@ -1,0 +1,40 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.25rem;
+  border-radius: 50px; /* Pill shape is sleeker */
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+
+.btnPrimary {
+  background: var(--button-gradient);
+  color: var(--primary-dark);
+  box-shadow: 0 4px 15px rgba(255, 186, 95, 0.2);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 186, 95, 0.35);
+  background: linear-gradient(135deg, #ffd385 0%, #faa947 100%);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--primary-gold);
+  border: 1px solid rgba(255, 206, 115, 0.5);
+  box-shadow: 0 4px 15px rgba(255, 206, 115, 0.05);
+}
+
+.btnOutline:hover {
+  background: rgba(255, 206, 115, 0.08);
+  border-color: var(--primary-gold);
+  transform: translateY(-2px);
+}

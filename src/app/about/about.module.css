@@ -1,0 +1,253 @@
+.page {
+  padding-top: 80px;
+}
+
+/* Hero */
+.hero {
+  padding: 8rem 5%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(47, 29, 79, 0.8) 0%, rgba(10, 11, 28, 0.95) 100%), url('/images/Astral BG/as 1.jpg') center/cover;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 206, 115, 0.1);
+}
+
+.heroInner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero h1 em {
+  color: var(--primary-gold);
+  font-style: normal;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Mission */
+.mission {
+  padding: var(--section-padding);
+  background: var(--primary-dark);
+}
+
+.missionInner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 206, 115, 0.15);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.missionIcon {
+  margin-bottom: 1.5rem;
+}
+
+.missionInner h2 {
+  font-size: 2.2rem;
+  color: var(--primary-gold);
+  margin-bottom: 1.5rem;
+}
+
+.missionInner p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* About Story */
+.about {
+  padding: var(--section-padding);
+  background: var(--section-gradient);
+}
+
+.aboutInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: radial-gradient(circle at center, rgba(255, 186, 95, 0.1) 0%, rgba(10, 11, 28, 0.8) 100%);
+  border: 1px solid rgba(255, 206, 115, 0.3);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(255, 206, 115, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.imagePlaceholder::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid rgba(255, 206, 115, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.aboutContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.aboutContent h2 em {
+  color: var(--primary-gold);
+  font-style: normal;
+}
+
+.aboutContent p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Timeline */
+.timeline {
+  padding: var(--section-padding);
+  background: var(--primary-dark);
+}
+
+.timelineTrack {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.timelineTrack::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 206, 115, 0.2);
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.timelineYear {
+  position: absolute;
+  left: -33px;
+  top: -5px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-darker);
+  border: 2px solid var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 206, 115, 0.2);
+}
+
+.timelineYear span {
+  font-size: 0.9rem;
+  color: var(--primary-gold);
+  font-weight: 600;
+}
+
+.timelineContent h3 {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+}
+
+.timelineContent p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding-left: 2rem;
+}
+
+/* Certifications */
+.certs {
+  padding: var(--section-padding);
+  background: var(--section-gradient);
+}
+
+.certs h2 em {
+  color: var(--primary-gold);
+  font-style: normal;
+}
+
+.certsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.certCard {
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.certCard:hover {
+  border-color: rgba(255, 186, 95, 0.3);
+  transform: translateY(-3px);
+}
+
+.certIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.certCard h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.certCard p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .aboutInner {
+    grid-template-columns: 1fr;
+  }
+  .aboutImage {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .certsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.25rem; }
+  .certsGrid { grid-template-columns: 1fr; max-width: 350px; }
+}
