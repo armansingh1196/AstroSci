@@ -48,6 +48,10 @@
 }
 
 @media (max-width: 640px) {
+  .section {
+    padding: 2.5rem 5%;
+  }
+
   .inner h2 {
     font-size: 1.75rem;
   }

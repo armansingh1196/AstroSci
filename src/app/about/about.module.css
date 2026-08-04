@@ -249,5 +249,8 @@
 
 @media (max-width: 640px) {
   .hero h1 { font-size: 2.25rem; }
-  .certsGrid { grid-template-columns: 1fr; max-width: 350px; }
+  .certsGrid { grid-template-columns: 1fr; max-width: 350px; gap: 1rem; }
+  .certCard { padding: 1.25rem 1rem; }
+  .timelineItem { padding-left: 2rem; margin-bottom: 2rem; }
+  .aboutSection, .timeline, .certs { padding: 2.5rem 5%; }
 }

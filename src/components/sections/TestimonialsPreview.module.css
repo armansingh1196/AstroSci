@@ -154,19 +154,29 @@
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
   }
   
   .header h2 {
     font-size: 2rem;
   }
   
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cardTop {
+    margin-bottom: 1rem;
+  }
+
   .cardName h4 {
     font-size: 1.35rem;
   }
   
   .cardText {
     font-size: 0.85rem;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 1rem;
   }
 }

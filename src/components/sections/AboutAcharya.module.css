@@ -115,7 +115,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-warm);
+  color: var(--primary-gold);
   font-weight: 600;
   font-size: 0.95rem;
   transition: gap var(--transition-fast);
@@ -138,6 +138,10 @@
 }
 
 @media (max-width: 640px) {
+  .imageCol {
+    display: none;
+  }
+
   .credentials {
     grid-template-columns: 1fr;
   }

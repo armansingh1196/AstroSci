@@ -102,8 +102,25 @@
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto;
+    gap: 1rem;
   }
   .header h2 {
     font-size: 2rem;
+  }
+  .card {
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+  .cardIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .card h3 {
+    font-size: 1.1rem;
+  }
+  .card p {
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }

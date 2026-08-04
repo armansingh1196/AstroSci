@@ -480,13 +480,12 @@ p {
   outline: 2px solid rgba(255, 206, 115, 0.5);
   outline-offset: 2px;
 }
- / *   - - -   M o b i l e   R e s i z i n g   A d j u s t m e n t s   - - -   * / 
- @ m e d i a   ( m a x - w i d t h :   6 4 0 p x )   { 
-     h t m l   { 
-         f o n t - s i z e :   1 4 p x ; 
-     } 
-     : r o o t   { 
-         - - s e c t i o n - p a d d i n g :   3 . 5 r e m   1 . 2 5 r e m ; 
-     } 
- }  
- 
+/* --- Mobile Resizing Adjustments --- */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  :root {
+    --section-padding: 3.5rem 1.25rem;
+  }
+}

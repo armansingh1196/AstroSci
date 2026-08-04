@@ -10,7 +10,7 @@ export default function AboutAcharya() {
         <div className={styles.imageCol}>
           <div className={styles.imagePlaceholder}></div>
           <div className={styles.experienceBadge}>
-            <h4 className="font-serif">15+</h4>
+            <h4 className="font-body">15+</h4>
             <p className="font-sans">Years Experience</p>
           </div>
         </div>
