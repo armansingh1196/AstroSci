@@ -139,7 +139,27 @@
 
 @media (max-width: 640px) {
   .imageCol {
-    display: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 2rem;
+  }
+
+  .imagePlaceholder {
+    height: 350px;
+  }
+
+  .experienceBadge {
+    padding: 0.8rem 1rem;
+    bottom: -15px;
+    right: -10px;
+  }
+  
+  .experienceBadge h4 {
+    font-size: 1.25rem;
+  }
+  
+  .experienceBadge p {
+    font-size: 0.65rem;
   }
 
   .credentials {
