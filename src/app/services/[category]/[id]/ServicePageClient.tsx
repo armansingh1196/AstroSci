@@ -16,9 +16,9 @@ export default function ServicePageClient({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const heroBgMap: Record<string, string> = {
-    kundali: '/images/Astral BG/as 1.jpg',
-    consultation: '/images/Astral BG/as 2.jpg',
-    vastu: '/images/Astral BG/as 3.jpg',
+    kundali: '/images/Astral BG/download (13).jpg',
+    consultation: '/images/Astral BG/download (11).jpg',
+    vastu: '/images/Astral BG/download (14).jpg',
   };
 
   return (
@@ -39,15 +39,15 @@ export default function ServicePageClient({
             </div>
             <h1 className="font-serif">{tier.name}</h1>
             <p className="font-sans">{tier.description}</p>
-            
+
             <div className={styles.priceContainer}>
               <span className={`${styles.price} font-serif`}>₹{tier.price}</span>
               <span className={`${styles.originalPrice} font-sans`}>₹{tier.originalPrice}</span>
             </div>
-            
+
             <div className={styles.ctaGroup}>
               <Button variant="primary" onClick={() => setIsModalOpen(true)} style={{ padding: '1.2rem 3rem', fontSize: '1.1rem' }}>
-                Book Now <ArrowRight size={20} style={{ marginLeft: '10px' }}/>
+                Book Now <ArrowRight size={20} style={{ marginLeft: '10px' }} />
               </Button>
               <div className={styles.heroTrust}>
                 <ShieldCheck size={20} className={styles.trustIcon} />
@@ -55,7 +55,7 @@ export default function ServicePageClient({
               </div>
             </div>
           </div>
-          
+
           <div className={styles.heroVisual}>
             <div className={styles.cosmicGradient}></div>
             <div className={styles.floatingCard}>
@@ -77,7 +77,7 @@ export default function ServicePageClient({
           <h2 className="font-serif">How It Works</h2>
           <p className="font-sans">A simple, transparent process to get your personalized guidance.</p>
         </div>
-        
+
         <div className={styles.compactProcess}>
           <div className={styles.compactStep}>
             <div className={styles.stepNumberSmall}>1</div>
@@ -86,7 +86,7 @@ export default function ServicePageClient({
               <p className="font-sans">Provide details and complete secure payment.</p>
             </div>
           </div>
-          
+
           <div className={styles.compactStep}>
             <div className={styles.stepNumberSmall}>2</div>
             <div>
@@ -94,7 +94,7 @@ export default function ServicePageClient({
               <p className="font-sans">We process your data or connect with you.</p>
             </div>
           </div>
-          
+
           <div className={styles.compactStep}>
             <div className={styles.stepNumberSmall}>3</div>
             <div>
