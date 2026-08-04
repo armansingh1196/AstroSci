@@ -159,4 +159,14 @@
   .header h2 {
     font-size: 2rem;
   }
+  
+  .cardName h4 {
+    font-size: 1.35rem;
+  }
+  
+  .cardText {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
 }

@@ -48,7 +48,7 @@ export default function ServiceCoverflow() {
             />
             <div className={styles.cardTextSection}>
               <div className={styles.textContent}>
-                <h3 className="font-serif">{item.title}</h3>
+                <h3 className="font-body">{item.title}</h3>
                 <p className="font-sans">{item.shortDescription}</p>
               </div>
               <span className={styles.arrowIcon}>→</span>

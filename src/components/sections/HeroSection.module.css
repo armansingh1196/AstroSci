@@ -262,8 +262,12 @@
   }
 
   .aiImageWrapper {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .statsBanner h3 {
+    font-size: 1.75rem;
   }
 
   .statsBanner {

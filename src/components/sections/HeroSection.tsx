@@ -52,22 +52,22 @@ export default function HeroSection() {
 
       <div className={`${styles.statsBanner} scale-in`}>
         <div className={styles.statItem}>
-          <h3 className="font-serif">10 Lakh+</h3>
+          <h3 className="font-body">10 Lakh+</h3>
           <p className="font-sans">Reports Delivered</p>
         </div>
         <div className={styles.divider} />
         <div className={styles.statItem}>
-          <h3 className="font-serif">4.9/5 <Star size={24} fill="currentColor" style={{ display: 'inline-block', verticalAlign: 'text-bottom' }}/></h3>
+          <h3 className="font-body">4.9/5 <Star size={24} fill="currentColor" style={{ display: 'inline-block', verticalAlign: 'text-bottom' }}/></h3>
           <p className="font-sans">Average Rating</p>
         </div>
         <div className={styles.divider} />
         <div className={styles.statItem}>
-          <h3 className="font-serif">15+ Years</h3>
+          <h3 className="font-body">15+ Years</h3>
           <p className="font-sans">Experience</p>
         </div>
         <div className={styles.divider} />
         <div className={styles.statItem}>
-          <h3 className="font-serif">100%</h3>
+          <h3 className="font-body">100%</h3>
           <p className="font-sans">Personalized</p>
         </div>
       </div>

@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
                 {React.cloneElement(reason.icon, { size: 24 })}
               </div>
               <div className={styles.cardContent}>
-                <h3 className="font-serif">{reason.title}</h3>
+                <h3 className="font-body">{reason.title}</h3>
                 <p className="font-sans">{reason.description}</p>
               </div>
             </div>
