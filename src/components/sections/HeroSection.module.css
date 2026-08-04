@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  background-image: 
+  background-image:
     radial-gradient(ellipse at 30% 50%, rgba(47, 29, 79, 0.85) 0%, rgba(10, 11, 28, 0.92) 70%, rgba(3, 4, 10, 0.98) 100%),
     url('/images/hero_bg.jpg');
   background-position: center;
@@ -157,8 +157,13 @@
 }
 
 @keyframes spin-local {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Stats Banner */
@@ -240,8 +245,13 @@
 }
 
 @media (max-width: 640px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 140px;
+  }
+
   .heroInner {
-    padding-top: 20px;
+    padding-top: 0px;
     position: relative;
   }
 
@@ -261,7 +271,7 @@
     gap: 1rem;
   }
 
-  .heroCtas > * {
+  .heroCtas>* {
     width: 100%;
   }
 
@@ -279,7 +289,7 @@
   .aiImageWrapper {
     width: 350px;
     height: 350px;
-    opacity: 0.15;
+    opacity: 0.30;
   }
 
   .chakraImage {
@@ -287,20 +297,28 @@
     filter: none;
   }
 
-  .statsBanner h3 {
-    font-size: 1.75rem;
+  .statsBanner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 0.5rem;
+    margin: -10px 1rem 0;
+    padding: 1.5rem 1rem;
   }
 
-  .statsBanner {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: -20px 1.25rem 0;
-    padding: 2rem 1.5rem;
+  .statsBanner h3 {
+    font-size: 1.5rem;
+  }
+
+  .statItem {
+    padding: 0 0.5rem;
+  }
+
+  .statItem p {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 
   .divider {
-    width: 80%;
-    height: 1px;
-    margin: 0 auto;
+    display: none;
   }
 }
